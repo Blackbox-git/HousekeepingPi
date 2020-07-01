@@ -1,0 +1,47 @@
+###########################################################################
+###########################################################################
+##                                                                       ##
+##  Allgemeiner Hinweis:                                                 ##
+##                                                                       ##
+##  Während der Aufzeichnung sollte zwischen den einzelnen Schritten,    ##
+##  soweit möglich, immer eine Minute gewartet werden, um den            ##
+##  Stromverbrauch im Verlauf eindeutig zuordnen zu können.              ##
+##                                                                       ##
+###########################################################################
+###########################################################################
+
+
+Interpretation:
+---------------
+
+* Der Stromverbrauch der Waschmaschine beträgt ausgeschaltet 0 mW. Die
+  Maschine hat wird per Drehrad hart ausgeschaltet und besitzt keine
+  Touch-Knöpfe.
+
+* Befindet sich das Drehrad auf dem ausgewählten Programm, beträgt der
+  Stromverbrauch der Waschmaschine 2570mW.
+
+* Direkt nach dem Drücken des Startknopfes wird das Magnetschloss 
+  verriegelt und Wasser in die Trommel gepumpt. Der Stromverbrauch
+  steigt auf 15020mW.
+
+* Ich habe mich für 5000mW als START-SCHWELLENWERT entschieden.
+
+* Während des Waschvorganges legt die Maschine mehrere Ruhephasen ein.
+  Der Stromverbrauch sinkt während dieser Phasen nie unter 2860mW.
+
+* Ist der Waschvorgang beendet und das Magnetschloss noch verriegelt, 
+  sinkt der Stromverbrauch auf 2430mW.
+
+* Wird das Magnetschloss freigegeben, sinkt der Stromverbrauch auf 1930mW.
+  Das heißt, das Magnetschloss hat einen Stromverbrauch von 500mW.
+
+* Ich habe mich für 2100mW als STOP-SCHWELLENWERT entschieden.(Dieser Wert
+  steht eindeutig für Waschvorgang beendet und Magnetschloss freigegeben)
+
+
+Schwellenwerte:
+---------------
+
+START-SCHWELLENWERT		5000mW
+STOP-SCHWELLENWERT		2100mW

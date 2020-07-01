@@ -1,0 +1,43 @@
+###########################################################################
+###########################################################################
+##                                                                       ##
+##  Allgemeiner Hinweis:                                                 ##
+##                                                                       ##
+##  Während der Aufzeichnung sollte zwischen den einzelnen Schritten,    ##
+##  soweit möglich, immer eine Minute gewartet werden, um den            ##
+##  Stromverbrauch im Verlauf eindeutig zuordnen zu können.              ##
+##                                                                       ##
+###########################################################################
+###########################################################################
+
+
+Interpretation:
+---------------
+
+* Der Stromverbrauch der Spülmaschine beträgt ausgeschaltet zwischen
+  350mW und 420mW. Die Maschine besitzt Touch-Knöpfe und ist somit nie
+  vollständig ausgeschaltet.
+
+* Die Auswahl eines Spülprogrammes wirkt sich nicht auf den Strom-
+  verbrauch aus.
+  
+* Direkt nach dem betätigen des Startknopfes wird Wasser in die
+  Spülmaschine gepumpt. Der Stromverbrauch steigt auf 37980mW.
+  
+* Ich habe mich für 2000mW als START-SCHWELLENWERT entschieden.
+
+* Während des Spülvorganges legt die Maschine mehrere Ruhephasen ein.
+  Der Stromverbrauch sinkt während dieser Phasen nie unter 1070mW.
+
+* Ist der Spülvorgang beendet, sinkt der Stromverbrauch auf den
+  ursprünglichen Wert zwischen 420mW und 350mW.
+
+* Ich habe mich für 600mW als STOP-SCHWELLENWERT entschieden.(Dieser Wert
+  steht eindeutig für Spülvorgang beendet)
+
+
+Schwellenwerte:
+---------------
+
+START-SCHWELLENWERT		2000mW
+STOP-SCHWELLENWERT		 600mW

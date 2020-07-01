@@ -1,0 +1,49 @@
+###########################################################################
+###########################################################################
+##                                                                       ##
+##  Allgemeiner Hinweis:                                                 ##
+##                                                                       ##
+##  Während der Aufzeichnung sollte zwischen den einzelnen Schritten,    ##
+##  soweit möglich, immer eine Minute gewartet werden, um den            ##
+##  Stromverbrauch im Verlauf eindeutig zuordnen zu können.              ##
+##                                                                       ##
+###########################################################################
+###########################################################################
+
+
+Interpretation:
+---------------
+
+* Der Stromverbrauch des 3D-Druckers beträgt im ausgeschalteten Zustand
+  5000mW. Für diesen Stromverbrauch ist das Netzteil verantwortlich.
+  
+* Ist der Drucker eingeschaltet, steigt der Stromverbrauch auf
+  5290mW an. Es wird ausschließlich der Arduino gestartet.
+ 
+* Die Auswahlen auf dem Display wirken sich nicht auf den Strom-
+  verbrauch aus.
+  
+* Direkt nach dem betätigen des Startknopfes wird das Heizbett und die
+  Düse auf die voreingestellten Werte aufgeheizt. Der Stromverbrauch
+  steigt auf 192040mW an. (Das Heizbett benötigt sehr viel Strom)
+  
+* Ich habe mich für 160000mW als START-SCHWELLENWERT entschieden.
+
+* Während des Druckvorganges wird immer wieder das Heizbett sowie die 
+  Düse aufgeheizt, was sich in einem unterschiedlichen Stromverbrauch
+  niederschlägt. Zum Teil reduziert sich dieser auf 17450mW.
+  
+* Ist der Druckvorgang beendet, sinkt der Stromverbrauch deutlich.
+  Mein 3D-Drucker signalisiert den beendeten Druckvorgang mit
+  pulsierenden LEDs. Der Stromverbrauch schwankt zwischen 5860mW und
+  5140mW.
+
+* Ich habe mich für 15000mW als STOP-SCHWELLENWERT entschieden.(Dieser
+  Wert steht eindeutig für Druckvorgang beendet)
+
+
+Schwellenwerte:
+---------------
+
+START-SCHWELLENWERT		160000mW
+STOP-SCHWELLENWERT		 15000mW
