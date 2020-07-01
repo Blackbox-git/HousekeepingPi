@@ -1,0 +1,6 @@
+List of the required materials:
+
+- 1x Raspberry PI Zero/1/2/3/3B+ or 4
+- 1x Original Raspberry PI power supply
+- 1x AVM Fritz!Box
+- 1-3x AVM Dect200, AVM Dect210 or  AVM 546E
