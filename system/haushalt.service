@@ -1,0 +1,11 @@
+[Unit]
+Description=Steckdosenüberwachung AVM Fritz!Box
+After=mariadb.service
+
+[Service]
+Type=simple
+ExecStart=/opt/haushalt/haushalt.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
