@@ -410,6 +410,7 @@ if [ $selection == '1' ];
 		USE haushalt;
 		CREATE TABLE device1 (id INT AUTO_INCREMENT PRIMARY KEY, running TINYINT, starttimestamp TIMESTAMP NULL, endtimestamp TIMESTAMP NULL);
 		CREATE TABLE failure (id INT AUTO_INCREMENT PRIMARY KEY, device1 TINYINT, device2 TINYINT, device3 TINYINT);
+		CREATE TABLE temp (id INT AUTO_INCREMENT PRIMARY KEY, strom INT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 		INSERT INTO device1 (running) VALUES (0);
 		INSERT INTO failure (device1,device2,device3) VALUES (0,0,0);
 		GRANT ALL ON *.* TO 'root'@'localhost' IDENTIFIED BY '$userpassword';
@@ -429,6 +430,7 @@ EOF
 		CREATE TABLE device1 (id INT AUTO_INCREMENT PRIMARY KEY, running TINYINT, starttimestamp TIMESTAMP NULL, endtimestamp TIMESTAMP NULL);
 		CREATE TABLE device2 (id INT AUTO_INCREMENT PRIMARY KEY, running TINYINT, starttimestamp TIMESTAMP NULL, endtimestamp TIMESTAMP NULL);
 		CREATE TABLE failure (id INT AUTO_INCREMENT PRIMARY KEY, device1 TINYINT, device2 TINYINT, device3 TINYINT);
+		CREATE TABLE temp (id INT AUTO_INCREMENT PRIMARY KEY, strom INT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 		INSERT INTO device1 (running) VALUES (0);
 		INSERT INTO device2 (running) VALUES (0);
 		INSERT INTO failure (device1,device2,device3) VALUES (0,0,0);
@@ -450,6 +452,7 @@ EOF
 		CREATE TABLE device2 (id INT AUTO_INCREMENT PRIMARY KEY, running TINYINT, starttimestamp TIMESTAMP NULL, endtimestamp TIMESTAMP NULL);
 		CREATE TABLE device3 (id INT AUTO_INCREMENT PRIMARY KEY, running TINYINT, starttimestamp TIMESTAMP NULL, endtimestamp TIMESTAMP NULL);
 		CREATE TABLE failure (id INT AUTO_INCREMENT PRIMARY KEY, device1 TINYINT, device2 TINYINT, device3 TINYINT);
+		CREATE TABLE temp (id INT AUTO_INCREMENT PRIMARY KEY, strom INT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
 		INSERT INTO device1 (running) VALUES (0);
 		INSERT INTO device2 (running) VALUES (0);
 		INSERT INTO device3 (running) VALUES (0);
