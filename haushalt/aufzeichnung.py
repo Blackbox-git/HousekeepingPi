@@ -165,16 +165,9 @@ while True:
 
 # Temporäre Datenbank erstelle
 print("")
-print("Lösche ggf. vorhandene alte temporäre Datenbank Tabelle.")
+print("Lösche alte Inhalte der temporären Datenbank Tabelle.")
 meldung = datenbank.loeschetemp()
 print("")
-print("Lege neue temporäre Datenbank Tabelle an.")
-meldung = datenbank.erstelletemp()
-if meldung == 1:
-	print("Die Datenbank kann nicht erstellt werden. Bitte installieren Sie das Projekt zuerst.")
-	sys.exit(0)
-else:
-	print("")
 
 # Verbindung zur Fritzbox aufbauen
 verbinden()
