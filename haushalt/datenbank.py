@@ -141,25 +141,6 @@ def loeschen(tabelle):
 	finally:
 		if mysql:
 			mysql.close()
-
-# Funktion temporäre Datenbank erstellen
-def erstelletemp():
-	mysql = None
-	query = """CREATE TABLE temp (id INT AUTO_INCREMENT PRIMARY KEY, strom INT, timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP);"""
-	datenbankquery = query
-	try:
-		mysql = MySQLdb.connect(datenbankserver, datenbankbenutzername, datenbankpasswort, datenbankname)
-		zeiger = mysql.cursor()
-		zeiger.execute(datenbankquery)
-		mysql.commit()
-		fehler = 0
-		return fehler
-	except:
-		fehler = 1
-		return fehler
-	finally:
-		if mysql:
-			mysql.close()
 			
 # Funktion temporäre Datenbank exportieren
 def exporttemp():
@@ -183,7 +164,7 @@ def exporttemp():
 # Funktion temporäre Datenbank löschen
 def loeschetemp():
 	mysql = None
-	query = """SET sql_notes = 0; DROP TABLE IF EXISTS temp; SET sql_notes = 1;"""
+	query = """TRUNCATE TABLE temp;"""
 	datenbankquery = query
 	try:	
 		mysql = MySQLdb.connect(datenbankserver, datenbankbenutzername, datenbankpasswort, datenbankname)
