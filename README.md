@@ -33,7 +33,7 @@ Clone the github repository and change to the new directory:
 ```
 cd ~
 git clone https://github.com/Blackbox-git/HousekeepingPi
-cd 
+cd HousekeepingPi
 ```
 
 ## Installation
