@@ -19,7 +19,7 @@ Now you have to create a separate telegram bot for each socket. At last a telegr
 
 ## Preparing Installation
 
-First install Raspbian Buster Lite on a SD-Card. After booting the Raspberry Pi, execute the following commands:
+[Here](https://www.youtube.com/watch?v=KxMh_Z_vvSk) you can find a video of the installation process. First install Raspbian Buster Lite on a SD-Card. After booting the Raspberry Pi, execute the following commands:
 
 ```
 sudo apt update
