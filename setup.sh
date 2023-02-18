@@ -259,13 +259,12 @@ if [ $selection == '1' ];
 	echo -e "\e[0m"
 	echo -e "\e[96mInstall necessary programs\e[0m"
 	echo -e "\e[0m"
-	sudo apt-get -y install python-pip python3-pip mariadb-server-10.3 python-mysqldb python3-mysqldb
+	sudo apt-get -y install python3-pip mariadb-server-10.3 python3-mysqldb
 
 	# PyDect200 instalieren
 	echo -e "\e[0m"
 	echo -e "\e[96mInstall Library PyDect200\e[0m"
 	echo -e "\e[0m"
-	sudo pip install PyDect200
 	sudo pip3 install PyDect200
 
 	echo -e "\e[0m"
