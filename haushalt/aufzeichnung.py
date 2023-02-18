@@ -63,7 +63,7 @@ def verbinden():
 			continue
 		else:
 			test = verbindung.get_device_name(AIN)
-			test = test.encode('ascii', 'ignore')
+			#test = test.encode('ascii', 'ignore')
 			if test == "inval":
 				time.sleep(1)
 				continue
@@ -95,7 +95,7 @@ def verbindungstest():
 # Funktion zum ermitteln des aktuellen Schaltstatus
 def ermittlestatus(device):
 	status = verbindung.get_state(device)
-	status = status.encode('ascii', 'ignore')
+	#status = status.encode('ascii', 'ignore')
 	if status == "inval" or status == "":
 		status = "NULL"
 	elif status == "0":
@@ -110,7 +110,7 @@ def ermittlestatus(device):
 # Funktion zum ermitteln des aktuellen Verbrauches in Milliwatt
 def ermittlestrom(device):
 	strom = verbindung.get_power_single(device)
-	strom = strom.encode('ascii', 'ignore')
+	#strom = strom.encode('ascii', 'ignore')
 	if strom == "inval" or strom == "":
 		strom = "NULL"
 	elif strom == "0":
