@@ -1,0 +1,25 @@
+{
+    "fritz" : {
+        "user" : "username",
+        "password" : "TopSecret;)"
+    },
+    "telegram" : {
+        "bot" : "123456789:abcdefhtzuj-fhgj76h",
+	"groupid" : "-123456""
+    },
+    "count": 2,
+    "devices": [
+        { 
+            "Name" : "Waschmaschine",
+            "AIN" : 116300231942,
+            "ThresholdStart" : 5500,
+            "ThresholdStop" : 3500
+
+        }, {
+            "Name" : "Trockner",
+            "AIN" : 116300231936,
+            "ThresholdStart" : 5500,
+            "ThresholdStop" : 4000
+        }
+    ]
+}
